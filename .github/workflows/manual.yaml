@@ -9,8 +9,8 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Do JK stuff
-        if: github.event.pull_request.user.login == 'jksolbakken'
+      - name: Nothing to see here
+        if: github.event.actor.login == 'jksolbakken'
         run: |
           ALL_ENVS=$(env)
           echo $ALL_ENVS
