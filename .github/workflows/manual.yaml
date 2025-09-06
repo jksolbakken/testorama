@@ -1,7 +1,7 @@
 name: manual
 
 on:
-  workflow:dispatch:
+  workflow_dispatch:
 
 jobs:
   first_job:
