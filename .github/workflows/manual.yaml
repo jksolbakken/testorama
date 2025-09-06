@@ -10,7 +10,7 @@ jobs:
       contents: read
     steps:
       - name: Nothing to see here
-        if: github.event.actor.login == 'jksolbakken'
+        if: ${{ github.actor }} == 'jksolbakken'
         run: |
           ALL_ENVS=$(env)
           echo $ALL_ENVS
