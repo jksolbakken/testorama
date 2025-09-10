@@ -25,4 +25,5 @@ jobs:
           echo "testing"
         env:
           SUPERSECRET: ${{ secrets.BOGUS }}
+          OTHER: thing
 
