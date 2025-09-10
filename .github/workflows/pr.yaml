@@ -1,8 +1,8 @@
 name: PR workflow
 
 on:
-  pull_request_target:
-
+  pull_request:
+    
 env:
   myvar: myvalue
 
