@@ -2,6 +2,9 @@ name: PR workflow
 
 on:
   pull_request:
+    types:
+      - opened
+      - edited
     
 env:
   myvar: myvalue
