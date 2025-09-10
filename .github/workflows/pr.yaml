@@ -19,4 +19,5 @@ jobs:
       - name: Do important build stuff
         run: |
           echo "Building PR: ${{ github.event.pull_request.title }}"
+          echo "testing"
 
