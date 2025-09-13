@@ -9,6 +9,12 @@ jobs:
     permissions:
       contents: read
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@v2.13.1
+        with:
+          disable-sudo: true
+          egress-policy: block
+
       - name: Nothing to see here
         if: ${{ github.actor == 'jksolbakken' }}
         run: |
