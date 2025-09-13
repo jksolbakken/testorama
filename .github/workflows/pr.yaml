@@ -1,8 +1,11 @@
-name: PR stuff
+name: PR workflow
 
 on:
   pull_request:
-
+    types:
+      - opened
+      - edited
+    
 env:
   myvar: myvalue
 
@@ -11,18 +14,16 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       contents: read
-    outputs:
-      opkey: opval
     steps:
       - name: Checkout latest code
         uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # ratchet:actions/checkout@v3
         with:
           persist-credentials: false
-      - name: Do other stuff
+      - name: Important build stuff 
         run: |
-          echo "head_ref: ${{ head_ref }}"
-          echo "ref: ${{ ref }}"
+          echo "Building PR: ${{ github.event.pull_request.title }}"
+          echo "testing"
         env:
-          head_ref: ${{ github.head_ref }}"
-          ref: ${{ github.ref }}"
+          SUPERSECRET: ${{ secrets.BOGUS }}
+          OTHER: thing
 
