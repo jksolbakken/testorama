@@ -1,9 +1,7 @@
 name: yolo
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 
 jobs:
@@ -12,16 +10,6 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Do JK stuff
-        if: github.event.pull_request.user.login == 'jksolbakken'
-        run: |
-          echo "J-K, ja"
-      - name: Do stuff other user
-        if: github.event.pull_request.user.login != 'jksolbakken'
-        run: |
-          echo "Ikke J-K, men $THEUSER"
-        env:
-          THEUSER: ${github.event.pull_request.user.login}
       - name: "use my action"
         uses: jksolbakken/tulleaction@v1
 
