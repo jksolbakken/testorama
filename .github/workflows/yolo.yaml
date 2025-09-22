@@ -22,5 +22,7 @@ jobs:
           echo "Ikke J-K, men $THEUSER"
         env:
           THEUSER: ${github.event.pull_request.user.login}
+      - name: "use my action"
+        uses: jksolbakken/tulleaction@v1
 
   
