@@ -11,6 +11,6 @@ jobs:
       contents: read
     steps:
       - name: "use my action"
-        uses: jksolbakken/tulleaction@v1.1
+        uses: jksolbakken/tulleaction@v1.2
 
   
