@@ -11,6 +11,5 @@ jobs:
       contents: read
     steps:
       - name: "use my action"
-        uses: jksolbakken/tulleaction@v1.2
+        uses: jksolbakken/tulleaction@5b53230c90434445499a7e3632a970ea0c8e3b1e # ratchet:jksolbakken/tulleaction@v1.2
 
-  
