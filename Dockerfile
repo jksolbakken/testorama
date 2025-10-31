@@ -9,3 +9,4 @@ RUN make testorama
 FROM cgr.dev/chainguard/static:latest
 COPY --from=builder /app/bin/testorama /testorama
 ENTRYPOINT [ "/testorama" ]
+
