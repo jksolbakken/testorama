@@ -1,0 +1,5 @@
+[tools]
+node = "latest"
+
+[tasks.yolo]
+run = "echo this is a test"

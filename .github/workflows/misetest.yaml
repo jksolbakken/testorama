@@ -1,0 +1,12 @@
+name: misetest
+on:
+  workflow-dispatch:
+jobs:
+  stuff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+            persist-credentials: false
+      - uses: jdx/mise-action@v2
+      - run: mise run yolo
