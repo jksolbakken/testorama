@@ -2,7 +2,7 @@ name: misetest
 on:
   workflow_dispatch:
 
-permissins: {}
+permissions: {}
 
 jobs:
   stuff:
