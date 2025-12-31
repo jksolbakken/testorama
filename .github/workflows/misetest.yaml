@@ -1,6 +1,6 @@
 name: misetest
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 permissins: {}
 
