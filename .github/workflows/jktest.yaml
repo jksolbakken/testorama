@@ -10,7 +10,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout latest code
-        uses: actions/checkout@f230c4ee1575cf72e36a60a43fa97bc9242b2981 # testing from
+        uses: actions/checkout@316b28ccf6b2cd2e791db4ec8842dda6817e48f1 # testing from
         with:
           persist-credentials: false
       
