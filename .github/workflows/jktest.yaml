@@ -1,0 +1,16 @@
+name: Just another test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout latest code
+        uses: actions/checkout@f230c4ee1575cf72e36a60a43fa97bc9242b2981 # testing from
+        with:
+          persist-credentials: false
+      
