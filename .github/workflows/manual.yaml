@@ -13,5 +13,5 @@ jobs:
     environment: test
     steps:
       - name: Test onbuild detector action
-        uses: navikt/onbuild-check@v1.20260528063147
+        uses: navikt/onbuild-check@v1.20260528072838
 
