@@ -1,7 +1,9 @@
-name: manual
+name: manual triggering
 
 on:
   workflow_dispatch:
+
+permissions: {}
 
 jobs:
   first_job:
@@ -10,7 +12,6 @@ jobs:
       contents: read
     environment: test
     steps:
-      - name: Nothing to see here
-        run: |
-          echo "doing stuff"
+      - name: Test onbuild detector action
+        uses: navikt/onbuild-check@v1.20260528061849
 
