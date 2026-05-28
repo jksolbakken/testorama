@@ -6,7 +6,7 @@ COPY . /app
 WORKDIR /app
 RUN make testorama
 
-FROM cgr.dev/chainguard/static:latest
-COPY --from=builder /app/bin/testorama /testorama
-ENTRYPOINT [ "/testorama" ]
+FROM jksolbakken/onbuild:1.20260528112215
+RUN echo yolo
+
 
