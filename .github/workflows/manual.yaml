@@ -15,5 +15,5 @@ jobs:
       - name: Test onbuild detector action
         uses: navikt/onbuild-check@v1.20260528122012
         with:
-          mode: audit
+          mode: enforce
 
