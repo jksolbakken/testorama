@@ -17,8 +17,9 @@ jobs:
         with:
           method: oidc
           identity-id: 3f259ca3-0401-4cdb-8fa7-907f321e1306
-          domain: "https://app.infisical.com"
+          domain: "https://eu.infisical.com"
           project-slug: example-project-g-k8-q
+          env-slug: "dev"
       - name: Use the secrets
         run: "Echo got the supersecret $TESTSECRET"
 
