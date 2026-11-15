@@ -13,7 +13,7 @@ jobs:
       - name: "checkout"
         uses: actions/checkout@v7
       - name: Fetch secrets from Infisical
-        uses: Infisical/secrets-action@v1
+        uses: Infisical/secrets-action@v1.0.18
         with:
           method: oidc
           identity-id: 3f259ca3-0401-4cdb-8fa7-907f321e1306
