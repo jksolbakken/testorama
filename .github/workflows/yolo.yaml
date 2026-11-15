@@ -3,13 +3,22 @@ name: yolo
 on:
   workflow_dispatch:
 
-
 jobs:
   first_job:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write
     steps:
-      - name: "use my action"
-        uses: jksolbakken/tulleaction@5b53230c90434445499a7e3632a970ea0c8e3b1e # ratchet:jksolbakken/tulleaction@v1.2
+      - name: "checkout"
+        uses: actions/checkout@v7
+      - Fetch secrets from Infisical
+        uses: Infisical/secrets-action@v1
+        with:
+          method: oidc
+          identity-id: 3f259ca3-0401-4cdb-8fa7-907f321e1306
+          domain: "https://app.infisical.com"
+          project-slug: example-project-g-k8-q
+      - Use the secrets
+        run: "Echo got the supersecret $TESTSECRET"
 
